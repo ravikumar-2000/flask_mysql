@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Thank You For Subscribing</h1>
+        <hr>
+        <small><b>please confirm your infromation</b></small>
+        <div style="text-align:center; width:50%; border: 1px solid black; margin: 20px; background-color: antiquewhite; font-weight: bold;">
+            {% for subscriber in subscribers %}
+                <br/>
+                {{subscriber.name}}
+                <br/>
+                {{subscriber.email}}
+                <br/>
+                <button type="submit" class="btn btn-secondary"><a href="/update/{{subscriber.id}}" style="text-decoration: none; color: blue;">Update Information</a></button>
+                <button type="submit" class="btn btn-secondary" style="padding-left: 20px"><a href="/delete/{{subscriber.id}}" style="text-decoration: none; color: blue;">Delete Account</a></button>
+                <hr>
+            {% endfor %}
+        </div>
+        
+    </div>
+{% endblock %}
+  
