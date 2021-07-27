@@ -69,7 +69,7 @@ def form():
                 msg['From'] = EMAIL
                 msg['To'] = email_address
                 msg.set_content(f'You have successfully signed up as {first_name} {last_name}.')
-                # msg.set_content(f'Mr. {first_name} {last_name} {EMAIL} is trying to access your gamil account! If you are not this click here...\nhttps://www.ullubangaya.com')
+              
 
                 with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
                     smtp.login(EMAIL, PASS)
